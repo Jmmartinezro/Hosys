@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Factura" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="199"/>
+	<queryString language="xPath">
+		<![CDATA[/Documento/Factura/Detalles/Producto]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[ancestor::Factura/@id]]></fieldDescription>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Factura/Huesped/Nombre]]></fieldDescription>
+	</field>
+	<field name="Apellido" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Factura/Huesped/Apellido]]></fieldDescription>
+	</field>
+	<field name="Identificacion" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Factura/Huesped/Identificacion]]></fieldDescription>
+	</field>
+	<field name="Habitacion" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Factura/Huesped/Habitacion]]></fieldDescription>
+	</field>
+	<field name="Numero" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Factura/Huesped/Tarjeta/Numero]]></fieldDescription>
+	</field>
+	<field name="Tipo" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Factura/Huesped/Tarjeta/Tipo]]></fieldDescription>
+	</field>
+	<field name="Fecha" class="java.lang.String">
+		<fieldDescription><![CDATA[Fecha]]></fieldDescription>
+	</field>
+	<field name="Concepto" class="java.lang.String">
+		<fieldDescription><![CDATA[Concepto]]></fieldDescription>
+	</field>
+	<field name="Detalles" class="java.lang.String">
+		<fieldDescription><![CDATA[Detalles]]></fieldDescription>
+	</field>
+	<field name="Cantidad" class="java.lang.String">
+		<fieldDescription><![CDATA[Cantidad]]></fieldDescription>
+	</field>
+	<field name="VlrUnidad" class="java.lang.String">
+		<fieldDescription><![CDATA[VlrUnidad]]></fieldDescription>
+	</field>
+	<field name="VlrTotal" class="java.lang.String">
+		<fieldDescription><![CDATA[VlrTotal]]></fieldDescription>
+	</field>
+	<field name="Subtotal" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Factura/Subtotal]]></fieldDescription>
+	</field>
+	<field name="IVA10" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Factura/IVA10]]></fieldDescription>
+	</field>
+	<field name="IVA16" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Factura/IVA16]]></fieldDescription>
+	</field>
+	<field name="Total" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Factura/Total]]></fieldDescription>
+	</field>
+	<field name="Abonos" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Factura/Abonos]]></fieldDescription>
+	</field>
+	<field name="Saldo" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Factura/Saldo]]></fieldDescription>
+	</field>
+	<field name="TotalEnLetras" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Factura/TotalEnLetras]]></fieldDescription>
+	</field>
+	<field name="user" class="java.lang.String">
+		<fieldDescription><![CDATA[ancestor::Documento/@user]]></fieldDescription>
+	</field>
+	<field name="iva" class="java.lang.String">
+		<fieldDescription><![CDATA[@iva]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="126" splitType="Stretch">
+			<staticText>
+				<reportElement x="89" y="0" width="298" height="24"/>
+				<textElement>
+					<font fontName="Engravers MT" size="18"/>
+				</textElement>
+				<text><![CDATA[Factura Electronica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="24" width="178" height="40"/>
+				<textElement>
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<text><![CDATA[HoSYS - Sistema de Recepción y Contabilidad Hotelera]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="104" width="267" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Solo se aceptan pagos en Tarjeta de Credito]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="84" width="126" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[IVA Regimen Común]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="24" width="205" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Dirección:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="44" width="100" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Teléfono:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="64" width="135" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Ciudad, Departamento:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="84" width="100" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[E-mail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="104" width="72" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ORIGINAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="64" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Versión 1.0]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="89" height="84"/>
+				<imageExpression><![CDATA["DisenioFactura\\H.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="98" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="6" width="127" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Fecha de Generación:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="6" width="108" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Número de factura:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="30" width="572" height="68"/>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="0" width="572" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="3" y="34" width="137" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Nombre:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="54" width="137" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Número de Documento:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="74" width="137" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Número Tarjeta de Credito:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="34" width="120" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Apellido:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="54" width="120" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Habitación:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="74" width="120" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Tipo Tarjeta de Credito:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="486" y="6" width="86" height="20"/>
+				<textElement>
+					<font fontName="Lucida Console" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="34" width="152" height="20"/>
+				<textElement>
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="34" width="144" height="20"/>
+				<textElement>
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Apellido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="54" width="152" height="20"/>
+				<textElement>
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Identificacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="54" width="144" height="20"/>
+				<textElement>
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Habitacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="74" width="152" height="20"/>
+				<textElement>
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Numero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="74" width="144" height="20"/>
+				<textElement>
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Tipo}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="127" y="6" width="140" height="20"/>
+				<textElement>
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="325" y="6" width="37" height="20"/>
+				<textElement>
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="277" y="6" width="38" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Página:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="50" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="572" height="25"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="3" y="5" width="80" height="20"/>
+				<textElement/>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="5" width="146" height="20"/>
+				<textElement/>
+				<text><![CDATA[Concepto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="5" width="119" height="20"/>
+				<textElement/>
+				<text><![CDATA[Detalles]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="5" width="50" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="5" width="66" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Vlr Unitario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="463" y="5" width="81" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Vlr Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="29" width="137" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[RESUMEN DE CARGOS:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="544" y="5" width="28" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[IVA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="0" width="80" height="20"/>
+				<textElement>
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="83" y="0" width="146" height="20"/>
+				<textElement>
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Concepto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="0" width="119" height="20"/>
+				<textElement>
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Detalles}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="347" y="0" width="50" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="0" width="66" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{VlrUnidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="463" y="0" width="81" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{VlrTotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="544" y="0" width="28" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="Lucida Console"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{iva}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="139" splitType="Stretch">
+			<staticText>
+				<reportElement x="243" y="14" width="100" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[SUBTOTAL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="243" y="34" width="100" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[IVA TARIFA 10%:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="243" y="54" width="100" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[IVA TARIFA 16%:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="243" y="74" width="100" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[TOTAL FACTURA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="243" y="94" width="100" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[MENOS ABONOS:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="243" y="114" width="100" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[SALDO A PAGAR:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="444" y="14" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Subtotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="34" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IVA10}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="54" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IVA16}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="74" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="94" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Abonos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="114" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Saldo}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="444" y="7" width="97" height="1"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="157" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="572" height="71"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="112" width="572" height="45"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="71" width="572" height="41"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="6" y="77" width="494" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Esta factura se asimila en sus efectos a la letra de cambio art. 774 código de comercio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="126" width="100" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Atentamente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="6" y="6" width="553" height="65"/>
+				<textElement>
+					<font fontName="Lucida Console" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TotalEnLetras}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="438" y="126" width="129" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="Lucida Console" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{user}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="29" splitType="Stretch"/>
+	</summary>
+</jasperReport>

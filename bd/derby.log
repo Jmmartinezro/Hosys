@@ -1,0 +1,18 @@
+2012-01-16 11:10:58.438 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) se ha iniciado y est?° listo para aceptar conexiones en el puerto 1527
+----------------------------------------------------------------
+2012-01-16 11:10:59.024 GMT
+ Arrancando Derby versi??n The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instancia a816c00e-0134-e636-7ef7-ffffbb12ecbc
+en el directorio de base de datos C:\Users\Alexander\Dropbox\Ing. Sw\Iteracion #5\My_Hosys_0.96\bd\Hosys  
+
+Cargador de clases de base de datos iniciado - derby.database.classpath=''
+
+2012-01-16 11:11:10.719 GMT:
+Concluyendo instancia a816c00e-0134-e636-7ef7-ffffbb12ecbc
+----------------------------------------------------------------
+2012-01-16 11:11:11.115 GMT Thread[DRDAConnThread_3,5,main] (DATABASE = Hosys), (DRDAID = {2}), Conclusión de la base de datos 'Hosys'.
+----------------------------------------------------------------
+2012-01-16 11:11:14.982 GMT
+ Arrancando Derby versi??n The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instancia eb0f4097-0134-e636-7ef7-ffffbb12ecbc
+en el directorio de base de datos C:\Users\Alexander\Dropbox\Ing. Sw\Iteracion #5\My_Hosys_0.96\bd\Hosys  
+
+Cargador de clases de base de datos iniciado - derby.database.classpath=''

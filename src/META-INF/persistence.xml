@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="Hosys_0.96PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>entidad.Recepcionista</class>
+    <class>entidad.Factura</class>
+    <class>entidad.Servicio</class>
+    <class>entidad.ObjetoMiniBar</class>
+    <class>entidad.Reserva</class>
+    <class>entidad.Huesped</class>
+    <class>entidad.Habitacion</class>
+    <properties>
+      <property name="hibernate.connection.username" value="Admin"/>
+      <property name="hibernate.connection.driver_class" value="org.apache.derby.jdbc.ClientDriver"/>
+      <property name="hibernate.connection.password" value="Admin"/>
+      <property name="hibernate.connection.url" value="jdbc:derby://localhost:1527/Hosys"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+    </properties>
+  </persistence-unit>
+</persistence>
